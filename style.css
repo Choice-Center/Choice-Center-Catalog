@@ -1,31 +1,38 @@
+/* ==========================================================================
+   चॉइस CENTER डिजिटल कैटलॉग - फाइनल स्टाइलशीट (इंग्लिश अक्षरों के सुधार के साथ)
+   ========================================================================== */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 🎯 इंग्लिश अक्षरों को सुंदर दिखाने के लिए नया फॉन्ट */
     margin: 0;
     padding: 0;
-    /* 🎯 यहाँ बदलाव किया है: सफेद हटाकर हल्का रेशमी मलाई रंग (Soft Cream) किया है */
+    /* बैकग्राउंड का रंग: हल्का रेशमी मलाई रंग (Soft Cream) */
     background-color: #fbf8f3; 
     color: #333;
     text-align: center;
 }
 
 header {
-    /* 🎯 गहरा राजसी नीला रंग */
-    background-color: #0c2340;
-    color: white;
+    /* सुंदर मस्टर्ड पीला (लाइट केसरिया शेड) */
+    background-color: #f4b41a;
+    color: #1a1a1a; 
     padding: 20px 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px; /* 🎯 Choice Center नाम को थोड़ा और बड़ा और अट्रैक्टिव किया है */
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 header p {
-    margin: 5px 0 0 0;
-    font-size: 13px;
-    color: #cbd5e1;
+    margin: 6px 0 0 0;
+    font-size: 14px;
+    color: #3a3a3a;
+    font-weight: 600; /* 🎯 इंग्लिश नाम 'Digital Catalog Showroom' को थोड़ा गहरा और साफ किया है */
+    letter-spacing: 0.5px;
 }
 
 .tabs-container {
@@ -42,20 +49,20 @@ header p {
 
 .tab-btn {
     padding: 8px 16px;
-    background-color: #f1ebd9; /* बटनों का रंग भी बैकग्राउंड से मैच करता हुआ */
+    background-color: #f1ebd9; 
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     font-size: 13px;
-    color: #0c2340;
+    color: #1a1a1a;
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
 
 .tab-btn.active, .tab-btn:hover {
-    background-color: #0c2340;
-    color: white;
+    background-color: #f4b41a;
+    color: #1a1a1a;
 }
 
 .catalog-grid {
@@ -67,23 +74,21 @@ header p {
     margin: 0 auto;
 }
 
-/* 🎯 गिरिराज कैटलॉग वाला नाप: ७८% चौड़ाई */
+/* गिरिराज कैटलॉग वाला नाप: ७८% चौड़ाई */
 .card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(12,35,64,0.08); /* हल्का सा नीले शेड का शैडो */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); 
     cursor: pointer;
     width: 78%;
     margin: 0 auto;
 }
 
+/* फोटो की ऊँचाई का सुधार: फालतू स्पेस ख़त्म, फोटो अपने असली आकार में दिखेगी */
 .card img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 9/16;
-    object-fit: contain;
-    background: #ffffff;
+    height: auto; 
     display: block;
 }
 
@@ -92,6 +97,6 @@ header p {
     font-size: 13px;
     font-weight: bold;
     background: #ffffff;
-    color: #0c2340;
+    color: #1a1a1a;
     border-top: 1px solid #f1f5f9;
 }
