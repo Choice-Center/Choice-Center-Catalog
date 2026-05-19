@@ -16,25 +16,26 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 24px;
     letter-spacing: 1px;
 }
 
 header p {
     margin: 5px 0 0 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #cbd5e1;
 }
 
 .tabs-container {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 10px;
-    padding: 15px;
+    padding: 12px;
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     overflow-x: auto;
     white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
 .tab-btn {
@@ -44,8 +45,9 @@ header p {
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .tab-btn.active, .tab-btn:hover {
@@ -53,11 +55,12 @@ header p {
     color: white;
 }
 
+/* 🎯 यहाँ मोबाइल के हिसाब से एक लाइन में २ या ३ फोटो एकदम सही दिखेंगी */
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 15px;
-    padding: 15px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -66,25 +69,25 @@ header p {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    cursor: pointer; /* छूने पर हाथ का निशान बनेगा */
 }
 
+/* 🎯 फोटो बिना कटे सुंदर 9:16 अनुपात में दिखेगी */
 .card img {
     width: 100%;
+    height: auto;
     aspect-ratio: 9/16;
-    object-fit: cover;
+    object-fit: contain; /* जिससे फोटो ज़ूम या कटेगी नहीं */
+    background: #f8fafc;
     display: block;
 }
 
 .card-name {
-    padding: 8px;
-    font-size: 12px;
+    padding: 6px;
+    font-size: 11px;
     font-weight: bold;
     background: #fff;
-    color: #555;
-}
-
-.loading-text {
-    color: #888;
-    font-style: italic;
+    color: #475569;
+    border-top: 1px solid #f1f5f9;
 }
