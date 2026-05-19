@@ -1,102 +1,105 @@
 /* ==========================================================================
-   चॉइस CENTER डिजिटल कैटलॉग - फाइनल स्टाइलशीट (इंग्लिश अक्षरों के सुधार के साथ)
+   CHOICE CENTER DIGITAL CATALOG - GIRRAJ STYLE CODES
    ========================================================================== */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 🎯 इंग्लिश अक्षरों को सुंदर दिखाने के लिए नया फॉन्ट */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* बैकग्राउंड का रंग: हल्का रेशमी मलाई रंग (Soft Cream) */
-    background-color: #fbf8f3; 
-    color: #333;
+    /* गिरिराज कैटलॉग जैसा हल्का सा ग्रे-व्हाइट बैकग्राउंड */
+    background-color: #f7f9fa; 
+    color: #222;
     text-align: center;
 }
 
 header {
-    /* सुंदर मस्टर्ड पीला (लाइट केसरिया शेड) */
-    background-color: #f4b41a;
-    color: #1a1a1a; 
-    padding: 20px 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    /* 🎯 हूबहू गिरिराज वाला गहरा हल्दी मस्टर्ड रंग */
+    background-color: #ffc107;
+    color: #000000; 
+    padding: 18px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 28px; /* 🎯 Choice Center नाम को थोड़ा और बड़ा और अट्रैक्टिव किया है */
-    letter-spacing: 1px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 header p {
-    margin: 6px 0 0 0;
-    font-size: 14px;
-    color: #3a3a3a;
-    font-weight: 600; /* 🎯 इंग्लिश नाम 'Digital Catalog Showroom' को थोड़ा गहरा और साफ किया है */
-    letter-spacing: 0.5px;
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    color: #333333;
+    font-weight: 600;
 }
 
 .tabs-container {
     display: flex;
     justify-content: start;
-    gap: 10px;
-    padding: 12px;
+    gap: 8px;
+    padding: 10px;
     background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
 .tab-btn {
-    padding: 8px 16px;
-    background-color: #f1ebd9; 
+    padding: 6px 14px;
+    background-color: #f0f2f5; 
     border: none;
-    border-radius: 20px;
+    border-radius: 4px; /* चौकोर थोड़े मुड़े हुए बटन */
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 13px;
-    color: #1a1a1a;
-    transition: all 0.3s ease;
+    color: #333;
+    transition: all 0.2s ease;
     flex-shrink: 0;
 }
 
 .tab-btn.active, .tab-btn:hover {
-    background-color: #f4b41a;
-    color: #1a1a1a;
+    background-color: #ffc107;
+    color: #000000;
 }
 
 .catalog-grid {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    padding: 15px;
-    max-width: 450px;
+    gap: 16px; /* फोटो के बीच का गैप एकदम सही किया */
+    padding: 12px;
+    max-width: 480px;
     margin: 0 auto;
 }
 
-/* गिरिराज कैटलॉग वाला नाप: ७८% चौड़ाई */
+/* 🎯 कार्ड का साइज़ और स्टाइल हूबहू गिरिराज जैसा */
 .card {
-    background: white;
-    border-radius: 12px;
+    background: #ffffff;
+    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06); 
+    /* बहुत ही हल्का और बारीक बॉर्डर और शैडो */
+    border: 1px solid #e1e4e6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
     cursor: pointer;
-    width: 78%;
+    width: 82%; /* स्क्रीन पर एकदम परफेक्ट चौड़ाई */
     margin: 0 auto;
 }
 
-/* फोटो की ऊँचाई का सुधार: फालतू स्पेस ख़त्म, फोटो अपने असली आकार में दिखेगी */
 .card img {
     width: 100%;
     height: auto; 
     display: block;
+    /* फोटो के अंदर की किसी भी फालतू जगह को खींचकर सेट करने के लिए */
+    object-fit: cover; 
 }
 
 .card-name {
-    padding: 10px;
+    padding: 8px 5px;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 600;
     background: #ffffff;
-    color: #1a1a1a;
-    border-top: 1px solid #f1f5f9;
+    color: #222222;
+    border-top: 1px solid #f0f2f5;
+    text-transform: capitalize;
 }
