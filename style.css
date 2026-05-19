@@ -2,12 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f6f9;
+    /* 🎯 यहाँ बदलाव किया है: सफेद हटाकर हल्का रेशमी मलाई रंग (Soft Cream) किया है */
+    background-color: #fbf8f3; 
     color: #333;
     text-align: center;
 }
 
 header {
+    /* 🎯 गहरा राजसी नीला रंग */
     background-color: #0c2340;
     color: white;
     padding: 20px 10px;
@@ -31,7 +33,7 @@ header p {
     justify-content: start;
     gap: 10px;
     padding: 12px;
-    background: white;
+    background: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     overflow-x: auto;
     white-space: nowrap;
@@ -40,12 +42,13 @@ header p {
 
 .tab-btn {
     padding: 8px 16px;
-    background-color: #e2e8f0;
+    background-color: #f1ebd9; /* बटनों का रंग भी बैकग्राउंड से मैच करता हुआ */
     border: none;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     font-size: 13px;
+    color: #0c2340;
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
@@ -55,25 +58,26 @@ header p {
     color: white;
 }
 
-/* 🎯 यहाँ बदलाव किया है: अब एक लाइन में सिर्फ १ ही फोटो आएगी, बिल्कुल गिरिराज कैटलॉग की तरह */
 .catalog-grid {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     padding: 15px;
-    max-width: 500px; /* मोबाइल स्क्रीन पर सुंदर दिखने के लिए चौड़ाई सेट की है */
+    max-width: 450px;
     margin: 0 auto;
 }
 
+/* 🎯 गिरिराज कैटलॉग वाला नाप: ७८% चौड़ाई */
 .card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(12,35,64,0.08); /* हल्का सा नीले शेड का शैडो */
     cursor: pointer;
+    width: 78%;
+    margin: 0 auto;
 }
 
-/* 🎯 फोटो बिना कटे अपने पूरे असली 9:16 आकार में ऊपर से नीचे दिखेगी */
 .card img {
     width: 100%;
     height: auto;
@@ -85,9 +89,9 @@ header p {
 
 .card-name {
     padding: 10px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
-    background: #fff;
+    background: #ffffff;
     color: #0c2340;
     border-top: 1px solid #f1f5f9;
 }
