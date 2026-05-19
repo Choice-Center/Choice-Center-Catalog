@@ -1,4 +1,3 @@
-// दीपक जी, यह आपका कूरियर लिंक है
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxFuMHDoRrP6S8zMAdMDR6Bv8WFSlnw0lKZrA2mQEL-M3qbfz8uGjjD1Gjf-y2ji0_i5A/exec";
 
 let allItems = [];
@@ -7,15 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(SCRIPT_URL)
         .then(response => response.json())
         .then(data => {
-            if (data.error) {
-                console.error("त्रुटि:", data.error);
-                return;
-            }
+            if (data.error) return;
             allItems = data.items;
             createTabs(data.categories);
             displayItems("All");
         })
-        .catch(err => console.error("डेटा लोड करने में समस्या:", err));
+        .catch(err => console.error(err));
 });
 
 function createTabs(categories) {
@@ -48,19 +44,22 @@ function displayItems(category) {
         const card = document.createElement("div");
         card.classList.add("card");
 
-        const img = document.createElement("img");
-        
-        // 🎯 दीपक जी, यहाँ हमने फोटो लोड करने का तरीका बदला है जो प्राइवेसी को बाईपास करेगा
         let rawUrl = item.url;
         let fileId = rawUrl.split("id=")[1];
-        img.src = "https://lh3.googleusercontent.com/d/" + fileId;
-        
+        let finalImgUrl = "https://docs.google.com/uc?export=view&id=" + fileId;
+
+        const img = document.createElement("img");
+        img.src = finalImgUrl;
         img.loading = "lazy";
         
-        // अगर फोटो लोड न हो तो यह एरर को संभाल लेगा
         img.onerror = function() {
-            this.src = "https://docs.google.com/uc?export=view&id=" + fileId;
+            this.src = "https://drive.google.com/thumbnail?authuser=0&sz=w600&id=" + fileId;
         };
+
+        // 🎯 यहाँ क्लिक करने का जादुई ऑप्शन जोड़ा है, जिससे पूरी फोटो नए पेज पर खुलेगी
+        card.addEventListener("click", () => {
+            window.open("https://drive.google.com/file/d/" + fileId + "/view?usp=drivesdk", "_blank");
+        });
 
         const name = document.createElement("div");
         name.classList.add("card-name");
